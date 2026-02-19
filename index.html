@@ -413,42 +413,72 @@
     <!-- Pricing Section -->
     <section id="price" class="py-24 px-6 bg-stone-900 text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-br from-stone-900 to-stone-800"></div>
-        <div class="absolute top-0 right-0 w-full h-full opacity-10" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px'}}></div>
+        <div class="absolute top-0 right-0 w-full h-full opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
         
         <div class="container mx-auto max-w-4xl relative z-10 text-center">
             <h2 class="text-3xl md:text-4xl font-serif font-bold mb-12">Plan & Price</h2>
 
-            <div class="bg-white text-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl max-w-2xl mx-auto transform hover:scale-[1.02] transition-transform duration-300">
-                <div class="inline-block bg-pink-600 text-white px-4 py-1 rounded-full text-sm font-bold mb-6 animate-pulse">
+            <div class="bg-white text-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl max-w-3xl mx-auto transform hover:scale-[1.01] transition-transform duration-300">
+                <div class="inline-block bg-pink-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-8 animate-pulse shadow-md">
                     6月末日までの限定キャンペーン
                 </div>
                 
-                <div class="mb-8">
-                    <h3 class="text-2xl font-bold text-gray-500 mb-2 line-through decoration-red-500 decoration-2">月額 11,000円</h3>
-                    <div class="flex items-center justify-center space-x-2">
-                        <span class="text-6xl font-bold text-pink-600">5,500</span>
-                        <span class="text-xl font-medium text-gray-600 mt-4">円 / 月</span>
+                <!-- Annual Plan (Recommended) -->
+                <div class="border-2 border-yellow-400 bg-yellow-50/50 rounded-2xl p-6 mb-8 relative overflow-hidden text-left shadow-sm">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-xs font-bold px-4 py-1 rounded-bl-lg">
+                        RECOMMENDED
                     </div>
-                    <p class="text-sm text-gray-500 mt-2">※全て税込価格</p>
+                    <h3 class="text-xl font-bold text-gray-800 flex items-center mb-2">
+                        <i data-lucide="crown" class="w-5 h-5 text-yellow-600 mr-2"></i>
+                        年額プラン（永続割引）
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4">
+                        一番人気！7月以降も値上がりなし。<br class="md:hidden">ずっとお得に学び続けたい方へ。
+                    </p>
+                    <div class="flex flex-col md:flex-row items-end md:items-center justify-between gap-4 border-t border-yellow-200 pt-4">
+                        <div>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl md:text-4xl font-bold text-gray-800">66,000</span>
+                                <span class="text-sm font-normal text-gray-600">円 / 年（税込）</span>
+                            </div>
+                            <p class="text-pink-600 font-bold text-sm mt-1 bg-white inline-block px-2 py-0.5 rounded border border-pink-100">
+                                実質月額 5,500円でずっと利用可能！
+                            </p>
+                        </div>
+                        <a href="https://buy.stripe.com/bJeaEZ7JYbkhdbWai4c7u02" target="_blank" class="w-full md:w-auto bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-bold py-3 px-8 rounded-xl shadow-md hover:shadow-lg hover:from-yellow-400 hover:to-yellow-500 hover:-translate-y-0.5 transition-all text-center flex items-center justify-center">
+                            年払いで申し込む <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="border-t border-dashed border-gray-200 py-6 mb-6">
-                    <div class="flex justify-between items-center bg-yellow-50 p-4 rounded-xl border border-yellow-100">
-                        <div class="flex items-center">
-                            <i data-lucide="sparkles" class="w-5 h-5 text-yellow-600 mr-2"></i>
-                            <span class="font-bold text-yellow-800">お得な年払い</span>
+                <!-- Monthly Plan -->
+                <div class="border border-gray-200 bg-stone-50/50 rounded-2xl p-6 relative text-left">
+                     <h3 class="text-xl font-bold text-gray-800 flex items-center mb-2">
+                        <i data-lucide="calendar" class="w-5 h-5 text-gray-400 mr-2"></i>
+                        月額プラン
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4">
+                        まずは気軽に始めたい方へ。
+                    </p>
+                    <div class="flex flex-col md:flex-row items-end md:items-center justify-between gap-4 border-t border-gray-200 pt-4">
+                         <div>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl font-bold text-gray-800">5,500</span>
+                                <span class="text-sm font-normal text-gray-600">円 / 月（税込）</span>
+                            </div>
+                            <p class="text-gray-500 text-xs mt-1">
+                                ※6月末まで。7月決済分より11,000円/月に自動切替
+                            </p>
                         </div>
-                        <div class="text-right">
-                            <span class="block text-sm text-gray-500 line-through">132,000円</span>
-                            <span class="text-2xl font-bold text-pink-700">66,000<span class="text-sm text-gray-600 font-normal">円/年</span></span>
-                        </div>
+                         <a href="https://buy.stripe.com/aFa3cxe8mewt1te9e0c7u01" target="_blank" class="w-full md:w-auto bg-white border border-stone-300 text-stone-600 font-bold py-3 px-8 rounded-xl hover:bg-stone-50 hover:text-stone-800 hover:border-stone-400 transition-all text-center flex items-center justify-center">
+                            月払いで申し込む <i data-lucide="chevron-right" class="ml-2 w-4 h-4"></i>
+                        </a>
                     </div>
-                    <p class="text-xs text-gray-500 mt-2 text-right">※月額5,500円 × 12ヶ月分の一括払い</p>
                 </div>
                 
-                <button class="w-full bg-gradient-to-r from-pink-700 to-pink-600 text-white text-xl font-bold py-4 rounded-xl shadow-lg hover:shadow-xl hover:from-pink-600 hover:to-pink-500 transition-all">
-                    今すぐ申し込む
-                </button>
+                <p class="text-xs text-gray-400 mt-8 text-center">
+                    ※ボタンをクリックすると、安全な決済ページ（Stripe）へ移動します
+                </p>
             </div>
         </div>
     </section>
