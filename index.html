@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OWN YOUR LIFE | 女性限定オンラインサロン</title>
+    <meta name="description" content="OWN YOUR LIFE — 本気で人生と向き合う女性たちが集まり、本物の経営者マインドを育てる実践型オンラインコミュニティ。">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
@@ -12,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -22,24 +23,18 @@
                         serif: ['"Noto Serif JP"', 'serif'],
                     },
                     animation: {
-                        'gradient-slow': 'gradient 15s ease infinite',
                         'blob': 'blob 7s infinite',
                         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-                        'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
-                        gradient: {
-                            '0%, 100%': { backgroundPosition: '0% 50%' },
-                            '50%': { backgroundPosition: '100% 50%' },
-                        },
                         blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '0%':   { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%':  { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%':  { transform: 'translate(-20px, 20px) scale(0.9)' },
                             '100%': { transform: 'translate(0px, 0px) scale(1)' },
                         },
                         fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '0%':   { opacity: '0', transform: 'translateY(20px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
                         }
                     }
@@ -47,545 +42,524 @@
             }
         }
     </script>
+
     <style>
         .animation-delay-2000 { animation-delay: 2s; }
         .animation-delay-4000 { animation-delay: 4s; }
-        .animation-delay-200 { animation-delay: 0.2s; }
-        .animation-delay-400 { animation-delay: 0.4s; }
-        .animation-delay-600 { animation-delay: 0.6s; }
-        .animate-fade-in-up { opacity: 0; }
+        .animation-delay-200  { animation-delay: 0.2s; }
+        .animation-delay-400  { animation-delay: 0.4s; }
+        .animation-delay-600  { animation-delay: 0.6s; }
+        .animate-fade-in-up   { opacity: 0; }
+
+        /* テキストシャドウ: 暗背景での文字読みやすさ向上 */
+        .text-shadow-warm {
+            text-shadow: 0 1px 4px rgba(30,21,10,0.9), 0 2px 12px rgba(30,21,10,0.7);
+        }
+        /* 背景画像にウォームフィルターを適用 */
+        .img-warm-filter {
+            filter: sepia(0.35) saturate(0.75) brightness(0.8) contrast(1.05);
+        }
     </style>
 </head>
-<body class="font-sans text-gray-700 antialiased bg-stone-50">
 
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="text-2xl font-serif font-bold text-pink-900 tracking-widest">
-                OWN YOUR LIFE
-            </div>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide items-center">
-                <a href="#concept" class="hover:text-pink-600 transition-colors">CONCEPT</a>
-                <a href="#about" class="hover:text-pink-600 transition-colors">ABOUT</a>
-                <a href="#benefits" class="hover:text-pink-600 transition-colors">BENEFITS</a>
-                <a href="#price" class="hover:text-pink-600 transition-colors">PRICE</a>
-                <button onclick="location.href='#price'" class="bg-pink-800 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition-all shadow-md transform hover:-translate-y-0.5">
-                    入会案内
-                </button>
-            </div>
+<body class="font-sans text-gray-700 antialiased bg-[#faf5ec]">
 
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
-                <i data-lucide="menu" class="w-7 h-7"></i>
+<!-- ── Navigation ──────────────────────────────────────────── -->
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+        <div class="text-2xl font-serif font-bold tracking-widest" style="color:#3d2200;">
+            OWN YOUR LIFE
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide items-center">
+            <a href="#concept" class="hover:text-[#a07c2a] transition-colors">CONCEPT</a>
+            <a href="#about"   class="hover:text-[#a07c2a] transition-colors">ABOUT</a>
+            <a href="#benefits"class="hover:text-[#a07c2a] transition-colors">BENEFITS</a>
+            <a href="#price"   class="hover:text-[#a07c2a] transition-colors">PRICE</a>
+            <button onclick="location.href='#price'"
+                    class="text-white px-6 py-2 rounded-full hover:opacity-90 transition-all shadow-md transform hover:-translate-y-0.5"
+                    style="background:#8b6218;">
+                入会案内
             </button>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-6 px-6 flex flex-col space-y-4">
-            <a href="#concept" class="text-lg font-medium mobile-link">Concept</a>
-            <a href="#about" class="text-lg font-medium mobile-link">About</a>
-            <a href="#benefits" class="text-lg font-medium mobile-link">Benefits</a>
-            <a href="#price" class="text-lg font-medium mobile-link">Price</a>
-            <button onclick="location.href='#price'" class="bg-pink-800 text-white py-3 rounded-lg w-full mt-4">入会案内</button>
-        </div>
-    </nav>
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+            <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+    </div>
 
-    <!-- Hero Section -->
-    <header class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <div class="w-full h-full bg-gradient-to-br from-pink-50 via-white to-stone-100 animate-gradient-slow"></div>
-            <!-- Decorative circles -->
-            <div class="absolute top-20 right-20 w-64 h-64 bg-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
-            <div class="absolute top-40 left-20 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
-            <div class="absolute -bottom-8 left-1/2 w-80 h-80 bg-yellow-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-6 px-6 flex flex-col space-y-4">
+        <a href="#concept"  class="text-lg font-medium mobile-link">Concept</a>
+        <a href="#about"    class="text-lg font-medium mobile-link">About</a>
+        <a href="#benefits" class="text-lg font-medium mobile-link">Benefits</a>
+        <a href="#price"    class="text-lg font-medium mobile-link">Price</a>
+        <button onclick="location.href='#price'" class="text-white py-3 rounded-lg w-full mt-4" style="background:#8b6218;">入会案内</button>
+    </div>
+</nav>
+
+<!-- ── Hero Section ─────────────────────────────────────────── -->
+<header class="relative" style="background: #f5f0e8;">
+    <img
+        src="hero.jpg"
+        alt="OWN YOUR LIFE 新体制 - 新しいステージへ、共に。"
+        class="w-full block"
+        style="height: auto;"
+    />
+    <!-- CTA: 画像下部にオーバーレイ -->
+    <div class="absolute bottom-6 md:bottom-10 left-0 right-0 flex justify-center">
+        <a href="#price"
+           class="inline-flex items-center text-white px-5 py-2.5 md:px-10 md:py-4 rounded-full text-sm md:text-lg font-medium transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+           style="background:#8b6218;">
+            まずは詳細を見る <i data-lucide="arrow-right" class="ml-1.5 md:ml-2 w-4 h-4 md:w-5 md:h-5"></i>
+        </a>
+    </div>
+</header>
+
+<!-- ── Concept Section ──────────────────────────────────────── -->
+<section id="concept" class="relative bg-white">
+
+    <!-- スマホのみ: 全面背景画像（ウォームフィルター）+ グラデーションオーバーレイ -->
+    <div class="md:hidden absolute inset-0 z-0">
+        <img
+            src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2070&auto=format&fit=crop"
+            alt=""
+            class="img-warm-filter w-full h-full object-cover object-center"
+        />
+        <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(61,34,0,0.15) 0%, rgba(30,21,10,0.55) 45%, rgba(20,12,4,0.93) 100%);"></div>
+    </div>
+
+    <div class="relative z-10 container mx-auto max-w-5xl py-24 px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+
+            <!-- 画像カラム: PCのみ表示 -->
+            <div class="hidden md:block relative">
+                <div class="aspect-[4/5] bg-stone-200 rounded-2xl overflow-hidden shadow-xl relative group">
+                    <img
+                        src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2070&auto=format&fit=crop"
+                        alt="自分を大切にする女性のイメージ"
+                        class="img-warm-filter w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div class="absolute inset-0 bg-[#3d2200]/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                </div>
+                <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-[#fdf9f2] rounded-full -z-10"></div>
+                <div class="absolute -top-6 -left-6 w-24 h-24 border-2 border-[#e8d5a0] rounded-full -z-10"></div>
+            </div>
+
+            <!-- テキストカラム -->
+            <div>
+                <!-- ゴールドデバイダー（スマホのみ） -->
+                <div class="flex items-center gap-3 mb-4 md:hidden">
+                    <div class="h-px flex-1 bg-[#c9a84c]/60"></div>
+                    <span class="text-[#c9a84c] text-xs tracking-[0.2em] font-medium uppercase">Community</span>
+                    <div class="h-px flex-1 bg-[#c9a84c]/60"></div>
+                </div>
+
+                <h2 class="text-3xl font-serif font-bold text-white md:text-gray-800 mb-6 leading-snug text-shadow-warm md:[text-shadow:none]">
+                    新OWN YOUR LIFE<br/>
+                    <span class="text-[#c9a84c] md:text-[#7a5215]">コミュニティー</span>
+                </h2>
+
+                <div class="space-y-4 text-white/95 md:text-gray-600 leading-relaxed text-shadow-warm md:[text-shadow:none]">
+                    <p>
+                        誰かに答えを求めるのではなく、<br/>
+                        <strong class="text-white md:text-gray-800 font-semibold">自ら考え、決断し、行動する。</strong>
+                    </p>
+                    <p>
+                        環境や他人のせいにせず、<br/>
+                        人生もビジネスも自分で創り上げる。
+                    </p>
+                    <p>
+                        「何をしてくれますか？」ではなく、<br/>
+                        <span class="text-[#e8c86a] md:text-[#c9a84c] font-bold">「私はこうなりたい」「こうしていく」</span>と語れる人へ。
+                    </p>
+                    <p>
+                        学ぶだけで終わらない。<br/>
+                        行動し、挑戦し、結果をつくる。
+                    </p>
+                    <p class="border-l-4 border-[#c9a84c] pl-4 py-2 rounded-r-lg text-white/95 md:text-gray-700 md:bg-[#fdf9f2]">
+                        新OWN YOUR LIFEは、<br/>
+                        本気で人生と向き合う女性たちが集まり、<br/>
+                        <strong class="text-[#e8c86a] md:text-gray-800">本物の経営者マインドを育てる実践型コミュニティ</strong>です。
+                    </p>
+                    <p class="text-[#e8c86a] md:text-[#7a5215] font-bold text-lg pt-1">
+                        人生の主導権を、自分の手に。<br/>
+                        OWN YOUR LIFE。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ── Target Section ───────────────────────────────────────── -->
+<section id="about" class="py-24 px-6 bg-[#faf5ec]">
+    <div class="container mx-auto max-w-4xl text-center">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-4">こんな気持ちを抱えていませんか？</h2>
+        <p class="text-gray-500 mb-16">今の自分を変えたいと願うあなたへ</p>
+
+        <div class="grid md:grid-cols-2 gap-6 text-left">
+            <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+                <div class="w-6 h-6 text-[#c9a84c] mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
+                <span class="text-gray-700">「億女」という言葉に惹かれるけど、自分とは遠い気がする</span>
+            </div>
+            <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+                <div class="w-6 h-6 text-[#c9a84c] mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
+                <span class="text-gray-700">やりたいことはあるのに、まだ形にできていない</span>
+            </div>
+            <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+                <div class="w-6 h-6 text-[#c9a84c] mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
+                <span class="text-gray-700">学びたい気持ちはあるけど、行動するエネルギーが足りない</span>
+            </div>
+            <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+                <div class="w-6 h-6 text-[#c9a84c] mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
+                <span class="text-gray-700">頑張りすぎて、少し立ち止まりたい</span>
+            </div>
+            <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+                <div class="w-6 h-6 text-[#c9a84c] mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
+                <span class="text-gray-700">心の奥では、自分の人生を変えたいと思っている</span>
+            </div>
+            <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+                <div class="w-6 h-6 text-[#c9a84c] mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
+                <span class="text-gray-700">自分に自信がなくて、前に出るのが怖い</span>
+            </div>
+            <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+                <div class="w-6 h-6 text-[#c9a84c] mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
+                <span class="text-gray-700">ふわっとした夢はあるけど、行動が続かない</span>
+            </div>
+            <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+                <div class="w-6 h-6 text-[#c9a84c] mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
+                <span class="text-gray-700">学ぶだけで終わらず、ちゃんと変わりたい</span>
+            </div>
         </div>
 
-        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-            <p class="text-pink-800 font-medium tracking-widest mb-6 animate-fade-in-up">女性限定オンラインサロン</p>
-            <h1 class="text-3xl md:text-5xl lg:text-7xl font-serif font-bold text-gray-800 mb-8 leading-tight animate-fade-in-up animation-delay-200">
-                自分の人生を、<br/>
-                自分で選ぶ側へ
-            </h1>
-            <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto animate-fade-in-up animation-delay-400">
-                学ぶだけで終わらせない。<br/>
-                OL・主婦・個人で何かを始めたい女性が<br/>
-                「自分で収益を生み出し、次のステージへ進む」ための<br/>
-                実践型オンラインサロンです。
+        <div class="mt-16 bg-white p-8 rounded-2xl shadow-sm inline-block max-w-2xl mx-auto border border-[#e8d5a0]">
+            <h3 class="text-xl font-bold mb-4" style="color:#3d2200;">おすすめの方</h3>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="px-4 py-2 bg-[#fdf9f2] text-[#7a5215] rounded-full text-sm font-medium hover:bg-[#f0e5c0] transition-colors"># 頑張りすぎて疲れている</span>
+                <span class="px-4 py-2 bg-[#fdf9f2] text-[#7a5215] rounded-full text-sm font-medium hover:bg-[#f0e5c0] transition-colors"># 何から始めたらいいか分からない</span>
+                <span class="px-4 py-2 bg-[#fdf9f2] text-[#7a5215] rounded-full text-sm font-medium hover:bg-[#f0e5c0] transition-colors"># 女性同士で安心して話したい</span>
+                <span class="px-4 py-2 bg-[#fdf9f2] text-[#7a5215] rounded-full text-sm font-medium hover:bg-[#f0e5c0] transition-colors"># 発信・集客をやさしく覚えたい</span>
+                <span class="px-4 py-2 bg-[#fdf9f2] text-[#7a5215] rounded-full text-sm font-medium hover:bg-[#f0e5c0] transition-colors"># 好きや経験を形にしたい</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Benefits Section ─────────────────────────────────────── -->
+<section id="benefits" class="py-24 px-6 bg-white">
+    <div class="container mx-auto max-w-6xl">
+        <div class="text-center mb-20">
+            <span class="text-[#a07c2a] font-medium tracking-widest uppercase text-sm">Members Benefits</span>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-800 mt-2">10の参加特典</h2>
+            <p class="mt-4 text-gray-500">メンバーだけの特別な体験と学びをご用意しました</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Benefit 1 -->
+            <div class="flex items-stretch bg-[#faf5ec] rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
+                <div class="w-16 md:w-20 bg-[#f0e5c0] flex flex-col items-center justify-center text-[#7a5215] font-serif flex-shrink-0 group-hover:bg-[#8b6218] group-hover:text-white transition-colors duration-300">
+                    <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
+                    <span class="text-2xl md:text-3xl font-bold">01</span>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
+                    <div class="flex items-center mb-2">
+                        <div class="p-2 bg-[#fdf9f2] rounded-full mr-3 text-[#c9a84c] group-hover:scale-110 transition-transform duration-300"><i data-lucide="star" class="w-5 h-5"></i></div>
+                        <h3 class="text-lg font-bold text-gray-800 group-hover:text-[#7a5215] transition-colors">RE:MEプログラム優待</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm pl-12">メイン講座60万円→半額30万円で受講可能</p>
+                </div>
+            </div>
+            <!-- Benefit 2 -->
+            <div class="flex items-stretch bg-[#faf5ec] rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
+                <div class="w-16 md:w-20 bg-[#f0e5c0] flex flex-col items-center justify-center text-[#7a5215] font-serif flex-shrink-0 group-hover:bg-[#8b6218] group-hover:text-white transition-colors duration-300">
+                    <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
+                    <span class="text-2xl md:text-3xl font-bold">02</span>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
+                    <div class="flex items-center mb-2">
+                        <div class="p-2 bg-[#fdf9f2] rounded-full mr-3 text-[#c9a84c] group-hover:scale-110 transition-transform duration-300"><i data-lucide="users" class="w-5 h-5"></i></div>
+                        <h3 class="text-lg font-bold text-gray-800 group-hover:text-[#7a5215] transition-colors">認定講師の講座割引</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm pl-12">10人以上の認定講師の講座が全て20%オフ</p>
+                </div>
+            </div>
+            <!-- Benefit 3 -->
+            <div class="flex items-stretch bg-[#faf5ec] rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
+                <div class="w-16 md:w-20 bg-[#f0e5c0] flex flex-col items-center justify-center text-[#7a5215] font-serif flex-shrink-0 group-hover:bg-[#8b6218] group-hover:text-white transition-colors duration-300">
+                    <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
+                    <span class="text-2xl md:text-3xl font-bold">03</span>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
+                    <div class="flex items-center mb-2">
+                        <div class="p-2 bg-[#fdf9f2] rounded-full mr-3 text-[#c9a84c] group-hover:scale-110 transition-transform duration-300"><i data-lucide="gift" class="w-5 h-5"></i></div>
+                        <h3 class="text-lg font-bold text-gray-800 group-hover:text-[#7a5215] transition-colors">高級リゾートオフ会</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm pl-12">会員制高級リゾートでの特別な時間</p>
+                </div>
+            </div>
+            <!-- Benefit 4 -->
+            <div class="flex items-stretch bg-[#faf5ec] rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
+                <div class="w-16 md:w-20 bg-[#f0e5c0] flex flex-col items-center justify-center text-[#7a5215] font-serif flex-shrink-0 group-hover:bg-[#8b6218] group-hover:text-white transition-colors duration-300">
+                    <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
+                    <span class="text-2xl md:text-3xl font-bold">04</span>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
+                    <div class="flex items-center mb-2">
+                        <div class="p-2 bg-[#fdf9f2] rounded-full mr-3 text-[#c9a84c] group-hover:scale-110 transition-transform duration-300"><i data-lucide="users" class="w-5 h-5"></i></div>
+                        <h3 class="text-lg font-bold text-gray-800 group-hover:text-[#7a5215] transition-colors">リアル合宿</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm pl-12">仲間と深く繋がるリアル合宿の開催</p>
+                </div>
+            </div>
+            <!-- Benefit 5 -->
+            <div class="flex items-stretch bg-[#faf5ec] rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
+                <div class="w-16 md:w-20 bg-[#f0e5c0] flex flex-col items-center justify-center text-[#7a5215] font-serif flex-shrink-0 group-hover:bg-[#8b6218] group-hover:text-white transition-colors duration-300">
+                    <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
+                    <span class="text-2xl md:text-3xl font-bold">05</span>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
+                    <div class="flex items-center mb-2">
+                        <div class="p-2 bg-[#fdf9f2] rounded-full mr-3 text-[#c9a84c] group-hover:scale-110 transition-transform duration-300"><i data-lucide="heart" class="w-5 h-5"></i></div>
+                        <h3 class="text-lg font-bold text-gray-800 group-hover:text-[#7a5215] transition-colors">ランチ交流会</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm pl-12">気軽に話せるランチ交流会</p>
+                </div>
+            </div>
+            <!-- Benefit 6 -->
+            <div class="flex items-stretch bg-[#faf5ec] rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
+                <div class="w-16 md:w-20 bg-[#f0e5c0] flex flex-col items-center justify-center text-[#7a5215] font-serif flex-shrink-0 group-hover:bg-[#8b6218] group-hover:text-white transition-colors duration-300">
+                    <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
+                    <span class="text-2xl md:text-3xl font-bold">06</span>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
+                    <div class="flex items-center mb-2">
+                        <div class="p-2 bg-[#fdf9f2] rounded-full mr-3 text-[#c9a84c] group-hover:scale-110 transition-transform duration-300"><i data-lucide="users" class="w-5 h-5"></i></div>
+                        <h3 class="text-lg font-bold text-gray-800 group-hover:text-[#7a5215] transition-colors">グループコンサル</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm pl-12">月2回、悩みや課題を相談できる場所</p>
+                </div>
+            </div>
+            <!-- Benefit 7 -->
+            <div class="flex items-stretch bg-[#faf5ec] rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
+                <div class="w-16 md:w-20 bg-[#f0e5c0] flex flex-col items-center justify-center text-[#7a5215] font-serif flex-shrink-0 group-hover:bg-[#8b6218] group-hover:text-white transition-colors duration-300">
+                    <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
+                    <span class="text-2xl md:text-3xl font-bold">07</span>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
+                    <div class="flex items-center mb-2">
+                        <div class="p-2 bg-[#fdf9f2] rounded-full mr-3 text-[#c9a84c] group-hover:scale-110 transition-transform duration-300"><i data-lucide="calendar" class="w-5 h-5"></i></div>
+                        <h3 class="text-lg font-bold text-gray-800 group-hover:text-[#7a5215] transition-colors">無料講座</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm pl-12">週1回以上、認定講師による学びの場</p>
+                </div>
+            </div>
+            <!-- Benefit 8 -->
+            <div class="flex items-stretch bg-[#faf5ec] rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
+                <div class="w-16 md:w-20 bg-[#f0e5c0] flex flex-col items-center justify-center text-[#7a5215] font-serif flex-shrink-0 group-hover:bg-[#8b6218] group-hover:text-white transition-colors duration-300">
+                    <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
+                    <span class="text-2xl md:text-3xl font-bold">08</span>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
+                    <div class="flex items-center mb-2">
+                        <div class="p-2 bg-[#fdf9f2] rounded-full mr-3 text-[#c9a84c] group-hover:scale-110 transition-transform duration-300"><i data-lucide="gift" class="w-5 h-5"></i></div>
+                        <h3 class="text-lg font-bold text-gray-800 group-hover:text-[#7a5215] transition-colors">限定テンプレ配布</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm pl-12">プロフィール・告知・リール等のテンプレート</p>
+                </div>
+            </div>
+            <!-- Benefit 9 -->
+            <div class="flex items-stretch bg-[#faf5ec] rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
+                <div class="w-16 md:w-20 bg-[#f0e5c0] flex flex-col items-center justify-center text-[#7a5215] font-serif flex-shrink-0 group-hover:bg-[#8b6218] group-hover:text-white transition-colors duration-300">
+                    <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
+                    <span class="text-2xl md:text-3xl font-bold">09</span>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
+                    <div class="flex items-center mb-2">
+                        <div class="p-2 bg-[#fdf9f2] rounded-full mr-3 text-[#c9a84c] group-hover:scale-110 transition-transform duration-300"><i data-lucide="check-circle" class="w-5 h-5"></i></div>
+                        <h3 class="text-lg font-bold text-gray-800 group-hover:text-[#7a5215] transition-colors">公開添削会</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm pl-12">月1回、インスタ投稿やプロフィールの添削</p>
+                </div>
+            </div>
+            <!-- Benefit 10 -->
+            <div class="flex items-stretch bg-[#faf5ec] rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
+                <div class="w-16 md:w-20 bg-[#f0e5c0] flex flex-col items-center justify-center text-[#7a5215] font-serif flex-shrink-0 group-hover:bg-[#8b6218] group-hover:text-white transition-colors duration-300">
+                    <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
+                    <span class="text-2xl md:text-3xl font-bold">10</span>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
+                    <div class="flex items-center mb-2">
+                        <div class="p-2 bg-[#fdf9f2] rounded-full mr-3 text-[#c9a84c] group-hover:scale-110 transition-transform duration-300"><i data-lucide="users" class="w-5 h-5"></i></div>
+                        <h3 class="text-lg font-bold text-gray-800 group-hover:text-[#7a5215] transition-colors">会員限定コミュニティ</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm pl-12">いつでも質問できる安心の場所</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Pricing Section ──────────────────────────────────────── -->
+<section id="price" class="py-24 px-6 text-white relative overflow-hidden" style="background:#1e150a;">
+    <div class="absolute inset-0" style="background: linear-gradient(135deg, #1e150a 0%, #2d1f0e 100%);"></div>
+    <div class="absolute top-0 right-0 w-full h-full opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+
+    <div class="container mx-auto max-w-4xl relative z-10 text-center">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-12">Plan &amp; Price</h2>
+
+        <div class="bg-white text-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl max-w-3xl mx-auto transform hover:scale-[1.01] transition-transform duration-300">
+
+            <!-- 年額プラン (RECOMMENDED) -->
+            <div class="border-2 border-yellow-400 bg-yellow-50/50 rounded-2xl p-6 mb-8 relative overflow-hidden text-left shadow-sm">
+                <div class="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-xs font-bold px-4 py-1 rounded-bl-lg">RECOMMENDED</div>
+                <h3 class="text-xl font-bold text-gray-800 flex items-center mb-2">
+                    <i data-lucide="crown" class="w-5 h-5 text-yellow-600 mr-2"></i>
+                    年額プラン（永続割引）
+                </h3>
+                <p class="text-sm text-gray-600 mb-4">
+                    一番人気！ずっとお得に学び続けたい方へ。<br class="md:hidden">年払いで実質月額5,500円。
+                </p>
+                <div class="flex flex-col md:flex-row items-end md:items-center justify-between gap-4 border-t border-yellow-200 pt-4">
+                    <div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-3xl md:text-4xl font-bold text-gray-800">66,000</span>
+                            <span class="text-sm font-normal text-gray-600">円 / 年（税込）</span>
+                        </div>
+                        <p class="text-[#a07c2a] font-bold text-sm mt-1 bg-white inline-block px-2 py-0.5 rounded border border-[#e8d5a0]">
+                            実質月額 5,500円でずっと利用可能！
+                        </p>
+                    </div>
+                    <a href="https://buy.stripe.com/bJeaEZ7JYbkhdbWai4c7u02" target="_blank"
+                       class="w-full md:w-auto bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-bold py-3 px-8 rounded-xl shadow-md hover:shadow-lg hover:from-yellow-400 hover:to-yellow-500 hover:-translate-y-0.5 transition-all text-center flex items-center justify-center">
+                        年払いで申し込む <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 月額プラン -->
+            <div class="border border-gray-200 bg-stone-50/50 rounded-2xl p-6 relative text-left">
+                <h3 class="text-xl font-bold text-gray-800 flex items-center mb-2">
+                    <i data-lucide="calendar" class="w-5 h-5 text-gray-400 mr-2"></i>
+                    月額プラン
+                </h3>
+                <p class="text-sm text-gray-600 mb-4">まずは気軽に始めたい方へ。</p>
+                <div class="flex flex-col md:flex-row items-end md:items-center justify-between gap-4 border-t border-gray-200 pt-4">
+                    <div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-3xl font-bold text-gray-800">11,000</span>
+                            <span class="text-sm font-normal text-gray-600">円 / 月（税込）</span>
+                        </div>
+                    </div>
+                    <a href="https://buy.stripe.com/4gM5kF0hw3RP0pa61Oc7u03" target="_blank"
+                       class="w-full md:w-auto bg-white border border-stone-300 text-stone-600 font-bold py-3 px-8 rounded-xl hover:bg-stone-50 hover:text-stone-800 hover:border-stone-400 transition-all text-center flex items-center justify-center">
+                        月払いで申し込む <i data-lucide="chevron-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="text-xs text-gray-400 mt-8 text-center">
+                ※ボタンをクリックすると、安全な決済ページ（Stripe）へ移動します
             </p>
-            <div class="animate-fade-in-up animation-delay-600">
-                <a href="#price" class="inline-flex items-center bg-pink-800 text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-pink-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                    まずは詳細を見る <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
-                </a>
+        </div>
+    </div>
+</section>
+
+<!-- ── Vision Section ───────────────────────────────────────── -->
+<section class="py-24 px-6 bg-gradient-to-b from-white to-[#fdf9f0]">
+    <div class="container mx-auto max-w-4xl text-center">
+        <i data-lucide="heart" class="w-12 h-12 mx-auto mb-6 text-[#d4a843]"></i>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-8">
+            OWN YOUR LIFEは<br/>
+            「学ぶ場所」ではなく「一緒に育てる場所」
+        </h2>
+        <div class="space-y-6 text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+            <p>
+                知識や経験を、ただ持っているだけで終わらせず、<br/>
+                誰かの一歩につなげていく。
+            </p>
+            <p>
+                12月末までに会員数1000名を目指しています。
+            </p>
+            <p class="font-medium text-[#7a5215]">
+                あなたも、この循環の一部になりませんか？
+            </p>
+        </div>
+
+        <div class="mt-12 flex justify-center">
+            <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-64 border-2 border-[#e8d5a0] flex flex-col justify-center relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-[#f0e5c0] text-[#7a5215] text-xs px-2 py-1 rounded-bl-lg">GOAL</div>
+                <div class="text-xl text-stone-400 font-medium mb-1">2026.12</div>
+                <div class="text-3xl font-bold text-gray-800">会員数 <span class="text-[#a07c2a]">1000</span>名</div>
             </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <!-- Concept Section -->
-    <section id="concept" class="py-24 px-6 bg-white">
-        <div class="container mx-auto max-w-5xl">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="relative">
-                    <div class="aspect-[4/5] bg-stone-200 rounded-2xl overflow-hidden shadow-xl relative group">
-                         <!-- Image from Slide 1 - Placeholder URL used for demonstration -->
-                         <img 
-                           src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2070&auto=format&fit=crop" 
-                           alt="自分を大切にする女性のイメージ" 
-                           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                         />
-                         <div class="absolute inset-0 bg-pink-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
-                    </div>
-                    <!-- Decorative elements -->
-                    <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-pink-50 rounded-full -z-10"></div>
-                    <div class="absolute -top-6 -left-6 w-24 h-24 border-2 border-pink-100 rounded-full -z-10"></div>
-                </div>
-                
-                <div>
-                    <h2 class="text-3xl font-serif font-bold text-gray-800 mb-8 leading-snug">
-                        OWN YOUR LIFEが考える<br/>
-                        <span class="text-pink-800">「億女」</span>とは
-                    </h2>
-                    <div class="space-y-6 text-gray-600 leading-relaxed">
-                        <p>
-                            ガツガツ稼ぐ人でも、完璧に出来る人でもありません。<br/>
-                            <strong class="text-gray-800 font-medium bg-pink-100 px-1">自分の人生を、自分のペースで育てていける女性。</strong>
-                        </p>
-                        <p>
-                            焦らなくていい。<br/>
-                            比べなくていい。<br/>
-                            今すぐ結果を出さなくていい。
-                        </p>
-                        <p>
-                            ここは、億女になる準備期間を過ごす場所。<br/>
-                            今のあなたのままでいい。<br/>
-                            出来ない自分を直す場所でも、何者かにならせる場所でもありません。
-                        </p>
-                        <p>
-                            ただ、触れて、感じて、整っていくうちに<br/>
-                            <span class="text-pink-800 font-bold">「私にもできるかもしれない」</span>が<br/>
-                            静かに芽を出していく。そんな場所です。
-                        </p>
-                    </div>
-                </div>
-            </div>
+<!-- ── Footer ───────────────────────────────────────────────── -->
+<footer class="py-12 px-6" style="background:#1e150a; color:#a09080;">
+    <div class="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0 text-center md:text-left">
+            <h3 class="text-2xl font-serif font-bold text-white tracking-widest mb-2">OWN YOUR LIFE</h3>
+            <p class="text-sm">女性限定オンラインサロン</p>
         </div>
-    </section>
-
-    <!-- Target Section -->
-    <section id="about" class="py-24 px-6 bg-stone-50">
-        <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-4">こんな気持ちを抱えていませんか？</h2>
-            <p class="text-gray-500 mb-16">今の自分を変えたいと願うあなたへ</p>
-            
-            <div class="grid md:grid-cols-2 gap-6 text-left">
-                <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                    <div class="w-6 h-6 text-pink-400 mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
-                    <span class="text-gray-700">「億女」という言葉に惹かれるけど、自分とは遠い気がする</span>
-                </div>
-                <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                    <div class="w-6 h-6 text-pink-400 mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
-                    <span class="text-gray-700">やりたいことはあるのに、まだ形にできていない</span>
-                </div>
-                <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                    <div class="w-6 h-6 text-pink-400 mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
-                    <span class="text-gray-700">学びたい気持ちはあるけど、行動するエネルギーが足りない</span>
-                </div>
-                <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                    <div class="w-6 h-6 text-pink-400 mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
-                    <span class="text-gray-700">頑張りすぎて、少し立ち止まりたい</span>
-                </div>
-                <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                    <div class="w-6 h-6 text-pink-400 mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
-                    <span class="text-gray-700">心の奥では、自分の人生を変えたいと思っている</span>
-                </div>
-                <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                    <div class="w-6 h-6 text-pink-400 mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
-                    <span class="text-gray-700">自分に自信がなくて、前に出るのが怖い</span>
-                </div>
-                <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                    <div class="w-6 h-6 text-pink-400 mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
-                    <span class="text-gray-700">ふわっとした夢はあるけど、行動が続かない</span>
-                </div>
-                <div class="flex items-start bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                    <div class="w-6 h-6 text-pink-400 mr-4 flex-shrink-0 mt-0.5"><i data-lucide="check-circle" class="w-full h-full"></i></div>
-                    <span class="text-gray-700">学ぶだけで終わらず、ちゃんと変わりたい</span>
-                </div>
-            </div>
-
-            <div class="mt-16 bg-white p-8 rounded-2xl shadow-sm inline-block max-w-2xl mx-auto border border-pink-100">
-               <h3 className="text-xl font-bold text-pink-900 mb-4">おすすめの方</h3>
-               <div class="flex flex-wrap justify-center gap-3">
-                 <span class="px-4 py-2 bg-pink-50 text-pink-800 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors"># 頑張りすぎて疲れている</span>
-                 <span class="px-4 py-2 bg-pink-50 text-pink-800 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors"># 何から始めたらいいか分からない</span>
-                 <span class="px-4 py-2 bg-pink-50 text-pink-800 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors"># 女性同士で安心して話したい</span>
-                 <span class="px-4 py-2 bg-pink-50 text-pink-800 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors"># 発信・集客をやさしく覚えたい</span>
-                 <span class="px-4 py-2 bg-pink-50 text-pink-800 rounded-full text-sm font-medium hover:bg-pink-100 transition-colors"># 好きや経験を形にしたい</span>
-               </div>
-            </div>
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+            <a href="terms.html"   class="hover:text-white transition-colors">利用規約</a>
+            <a href="privacy.html" class="hover:text-white transition-colors">プライバシーポリシー</a>
+            <a href="tokusho.html" class="hover:text-white transition-colors">特定商取引法に基づく表記</a>
+            <a href="mailto:ownyour1234@gmail.com" class="hover:text-white transition-colors">お問い合わせ</a>
         </div>
-    </section>
+    </div>
+    <div class="container mx-auto mt-12 pt-8 text-center text-xs" style="border-top:1px solid #2d1f0e;">
+        &copy; <span id="year"></span> OWN YOUR LIFE. All Rights Reserved.
+    </div>
+</footer>
 
-    <!-- Benefits Section -->
-    <section id="benefits" class="py-24 px-6 bg-white">
-        <div class="container mx-auto max-w-6xl">
-            <div class="text-center mb-20">
-                <span class="text-pink-600 font-medium tracking-widest uppercase text-sm">Members Benefits</span>
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-800 mt-2">10の参加特典</h2>
-                <p class="mt-4 text-gray-500">メンバーだけの特別な体験と学びをご用意しました</p>
-            </div>
+<script>
+    lucide.createIcons();
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Benefit 1 -->
-                <div class="flex items-stretch bg-stone-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
-                    <div class="w-16 md:w-20 bg-pink-100 flex flex-col items-center justify-center text-pink-800 font-serif flex-shrink-0 group-hover:bg-pink-800 group-hover:text-white transition-colors duration-300">
-                        <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
-                        <span class="text-2xl md:text-3xl font-bold">01</span>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
-                        <div class="flex items-center mb-2">
-                            <div class="p-2 bg-pink-50 rounded-full mr-3 text-pink-600 group-hover:scale-110 transition-transform duration-300">
-                                <i data-lucide="star" class="w-5 h-5"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-800 group-hover:text-pink-800 transition-colors">RE:MEプログラム優待</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm pl-12">メイン講座60万円→半額30万円で受講可能</p>
-                    </div>
-                </div>
+    // Mobile Menu
+    const menuBtn    = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon   = menuBtn.querySelector('i');
+    const mobileLinks= document.querySelectorAll('.mobile-link');
+    let isMenuOpen   = false;
 
-                <!-- Benefit 2 -->
-                <div class="flex items-stretch bg-stone-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
-                    <div class="w-16 md:w-20 bg-pink-100 flex flex-col items-center justify-center text-pink-800 font-serif flex-shrink-0 group-hover:bg-pink-800 group-hover:text-white transition-colors duration-300">
-                        <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
-                        <span class="text-2xl md:text-3xl font-bold">02</span>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
-                        <div class="flex items-center mb-2">
-                            <div class="p-2 bg-pink-50 rounded-full mr-3 text-pink-600 group-hover:scale-110 transition-transform duration-300">
-                                <i data-lucide="users" class="w-5 h-5"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-800 group-hover:text-pink-800 transition-colors">認定講師の講座割引</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm pl-12">10人以上の認定講師の講座が全て20%オフ</p>
-                    </div>
-                </div>
-
-                <!-- Benefit 3 -->
-                <div class="flex items-stretch bg-stone-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
-                    <div class="w-16 md:w-20 bg-pink-100 flex flex-col items-center justify-center text-pink-800 font-serif flex-shrink-0 group-hover:bg-pink-800 group-hover:text-white transition-colors duration-300">
-                        <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
-                        <span class="text-2xl md:text-3xl font-bold">03</span>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
-                        <div class="flex items-center mb-2">
-                            <div class="p-2 bg-pink-50 rounded-full mr-3 text-pink-600 group-hover:scale-110 transition-transform duration-300">
-                                <i data-lucide="gift" class="w-5 h-5"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-800 group-hover:text-pink-800 transition-colors">高級リゾートオフ会</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm pl-12">会員制高級リゾートでの特別な時間</p>
-                    </div>
-                </div>
-
-                <!-- Benefit 4 -->
-                <div class="flex items-stretch bg-stone-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
-                    <div class="w-16 md:w-20 bg-pink-100 flex flex-col items-center justify-center text-pink-800 font-serif flex-shrink-0 group-hover:bg-pink-800 group-hover:text-white transition-colors duration-300">
-                        <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
-                        <span class="text-2xl md:text-3xl font-bold">04</span>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
-                        <div class="flex items-center mb-2">
-                            <div class="p-2 bg-pink-50 rounded-full mr-3 text-pink-600 group-hover:scale-110 transition-transform duration-300">
-                                <i data-lucide="users" class="w-5 h-5"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-800 group-hover:text-pink-800 transition-colors">リアル合宿</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm pl-12">仲間と深く繋がるリアル合宿の開催</p>
-                    </div>
-                </div>
-
-                <!-- Benefit 5 -->
-                <div class="flex items-stretch bg-stone-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
-                    <div class="w-16 md:w-20 bg-pink-100 flex flex-col items-center justify-center text-pink-800 font-serif flex-shrink-0 group-hover:bg-pink-800 group-hover:text-white transition-colors duration-300">
-                        <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
-                        <span class="text-2xl md:text-3xl font-bold">05</span>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
-                        <div class="flex items-center mb-2">
-                            <div class="p-2 bg-pink-50 rounded-full mr-3 text-pink-600 group-hover:scale-110 transition-transform duration-300">
-                                <i data-lucide="heart" class="w-5 h-5"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-800 group-hover:text-pink-800 transition-colors">ランチ交流会</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm pl-12">気軽に話せるランチ交流会</p>
-                    </div>
-                </div>
-
-                <!-- Benefit 6 -->
-                <div class="flex items-stretch bg-stone-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
-                    <div class="w-16 md:w-20 bg-pink-100 flex flex-col items-center justify-center text-pink-800 font-serif flex-shrink-0 group-hover:bg-pink-800 group-hover:text-white transition-colors duration-300">
-                        <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
-                        <span class="text-2xl md:text-3xl font-bold">06</span>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
-                        <div class="flex items-center mb-2">
-                            <div class="p-2 bg-pink-50 rounded-full mr-3 text-pink-600 group-hover:scale-110 transition-transform duration-300">
-                                <i data-lucide="users" class="w-5 h-5"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-800 group-hover:text-pink-800 transition-colors">グループコンサル</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm pl-12">月2回、悩みや課題を相談できる場所</p>
-                    </div>
-                </div>
-
-                <!-- Benefit 7 -->
-                <div class="flex items-stretch bg-stone-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
-                    <div class="w-16 md:w-20 bg-pink-100 flex flex-col items-center justify-center text-pink-800 font-serif flex-shrink-0 group-hover:bg-pink-800 group-hover:text-white transition-colors duration-300">
-                        <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
-                        <span class="text-2xl md:text-3xl font-bold">07</span>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
-                        <div class="flex items-center mb-2">
-                            <div class="p-2 bg-pink-50 rounded-full mr-3 text-pink-600 group-hover:scale-110 transition-transform duration-300">
-                                <i data-lucide="calendar" class="w-5 h-5"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-800 group-hover:text-pink-800 transition-colors">無料講座</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm pl-12">週1回以上、認定講師による学びの場</p>
-                    </div>
-                </div>
-
-                <!-- Benefit 8 -->
-                <div class="flex items-stretch bg-stone-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
-                    <div class="w-16 md:w-20 bg-pink-100 flex flex-col items-center justify-center text-pink-800 font-serif flex-shrink-0 group-hover:bg-pink-800 group-hover:text-white transition-colors duration-300">
-                        <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
-                        <span class="text-2xl md:text-3xl font-bold">08</span>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
-                        <div class="flex items-center mb-2">
-                            <div class="p-2 bg-pink-50 rounded-full mr-3 text-pink-600 group-hover:scale-110 transition-transform duration-300">
-                                <i data-lucide="gift" class="w-5 h-5"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-800 group-hover:text-pink-800 transition-colors">限定テンプレ配布</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm pl-12">プロフィール・告知・リール等のテンプレート</p>
-                    </div>
-                </div>
-
-                <!-- Benefit 9 -->
-                <div class="flex items-stretch bg-stone-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
-                    <div class="w-16 md:w-20 bg-pink-100 flex flex-col items-center justify-center text-pink-800 font-serif flex-shrink-0 group-hover:bg-pink-800 group-hover:text-white transition-colors duration-300">
-                        <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
-                        <span class="text-2xl md:text-3xl font-bold">09</span>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
-                        <div class="flex items-center mb-2">
-                            <div class="p-2 bg-pink-50 rounded-full mr-3 text-pink-600 group-hover:scale-110 transition-transform duration-300">
-                                <i data-lucide="check-circle" class="w-5 h-5"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-800 group-hover:text-pink-800 transition-colors">公開添削会</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm pl-12">月1回、インスタ投稿やプロフィールの添削</p>
-                    </div>
-                </div>
-
-                <!-- Benefit 10 -->
-                <div class="flex items-stretch bg-stone-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group">
-                    <div class="w-16 md:w-20 bg-pink-100 flex flex-col items-center justify-center text-pink-800 font-serif flex-shrink-0 group-hover:bg-pink-800 group-hover:text-white transition-colors duration-300">
-                        <span class="text-xs tracking-widest uppercase mb-1 opacity-60">No.</span>
-                        <span class="text-2xl md:text-3xl font-bold">10</span>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col justify-center border border-stone-100 border-l-0 rounded-r-xl bg-white">
-                        <div class="flex items-center mb-2">
-                            <div class="p-2 bg-pink-50 rounded-full mr-3 text-pink-600 group-hover:scale-110 transition-transform duration-300">
-                                <i data-lucide="users" class="w-5 h-5"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-800 group-hover:text-pink-800 transition-colors">会員限定コミュニティ</h3>
-                        </div>
-                        <p class="text-gray-600 text-sm pl-12">いつでも質問できる安心の場所</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="price" class="py-24 px-6 bg-stone-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-stone-900 to-stone-800"></div>
-        <div class="absolute top-0 right-0 w-full h-full opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
-        
-        <div class="container mx-auto max-w-4xl relative z-10 text-center">
-            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-12">Plan & Price</h2>
-
-            <div class="bg-white text-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl max-w-3xl mx-auto transform hover:scale-[1.01] transition-transform duration-300">
-                <div class="inline-block bg-pink-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-8 animate-pulse shadow-md">
-                    6月末日までの限定キャンペーン
-                </div>
-                
-                <!-- Annual Plan (Recommended) -->
-                <div class="border-2 border-yellow-400 bg-yellow-50/50 rounded-2xl p-6 mb-8 relative overflow-hidden text-left shadow-sm">
-                    <div class="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-xs font-bold px-4 py-1 rounded-bl-lg">
-                        RECOMMENDED
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 flex items-center mb-2">
-                        <i data-lucide="crown" class="w-5 h-5 text-yellow-600 mr-2"></i>
-                        年額プラン（永続割引）
-                    </h3>
-                    <p class="text-sm text-gray-600 mb-4">
-                        一番人気！7月以降も値上がりなし。<br class="md:hidden">ずっとお得に学び続けたい方へ。
-                    </p>
-                    <div class="flex flex-col md:flex-row items-end md:items-center justify-between gap-4 border-t border-yellow-200 pt-4">
-                        <div>
-                            <div class="flex items-baseline gap-2">
-                                <span class="text-3xl md:text-4xl font-bold text-gray-800">66,000</span>
-                                <span class="text-sm font-normal text-gray-600">円 / 年（税込）</span>
-                            </div>
-                            <p class="text-pink-600 font-bold text-sm mt-1 bg-white inline-block px-2 py-0.5 rounded border border-pink-100">
-                                実質月額 5,500円でずっと利用可能！
-                            </p>
-                        </div>
-                        <a href="https://buy.stripe.com/bJeaEZ7JYbkhdbWai4c7u02" target="_blank" class="w-full md:w-auto bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-bold py-3 px-8 rounded-xl shadow-md hover:shadow-lg hover:from-yellow-400 hover:to-yellow-500 hover:-translate-y-0.5 transition-all text-center flex items-center justify-center">
-                            年払いで申し込む <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Monthly Plan -->
-                <div class="border border-gray-200 bg-stone-50/50 rounded-2xl p-6 relative text-left">
-                     <h3 class="text-xl font-bold text-gray-800 flex items-center mb-2">
-                        <i data-lucide="calendar" class="w-5 h-5 text-gray-400 mr-2"></i>
-                        月額プラン
-                    </h3>
-                    <p class="text-sm text-gray-600 mb-4">
-                        まずは気軽に始めたい方へ。
-                    </p>
-                    <div class="flex flex-col md:flex-row items-end md:items-center justify-between gap-4 border-t border-gray-200 pt-4">
-                         <div>
-                            <div class="flex items-baseline gap-2">
-                                <span class="text-3xl font-bold text-gray-800">5,500</span>
-                                <span class="text-sm font-normal text-gray-600">円 / 月（税込）</span>
-                            </div>
-                            <p class="text-gray-500 text-xs mt-1">
-                                ※6月末まで。7月決済分より11,000円/月に自動切替
-                            </p>
-                        </div>
-                         <a href="https://buy.stripe.com/aFa3cxe8mewt1te9e0c7u01" target="_blank" class="w-full md:w-auto bg-white border border-stone-300 text-stone-600 font-bold py-3 px-8 rounded-xl hover:bg-stone-50 hover:text-stone-800 hover:border-stone-400 transition-all text-center flex items-center justify-center">
-                            月払いで申し込む <i data-lucide="chevron-right" class="ml-2 w-4 h-4"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <p class="text-xs text-gray-400 mt-8 text-center">
-                    ※ボタンをクリックすると、安全な決済ページ（Stripe）へ移動します
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vision Section -->
-    <section class="py-24 px-6 bg-gradient-to-b from-white to-pink-50">
-        <div class="container mx-auto max-w-4xl text-center">
-            <i data-lucide="heart" class="w-12 h-12 text-pink-300 mx-auto mb-6"></i>
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-8">
-                OWN YOUR LIFEは<br/>
-                「学ぶ場所」ではなく「一緒に育てる場所」
-            </h2>
-            <div class="space-y-6 text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                <p>
-                    知識や経験を、ただ持っているだけで終わらせず、<br/>
-                    誰かの一歩につなげていく。
-                </p>
-                <p>
-                    2026年6月末までに会員数100名、<br/>
-                    12月末までに会員数1000名を目指しています。
-                </p>
-                <p class="font-medium text-pink-800">
-                    あなたも、この循環の一部になりませんか？
-                </p>
-            </div>
-
-            <div class="mt-12 flex flex-col md:flex-row justify-center gap-6">
-                 <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-64 flex flex-col justify-center">
-                    <div class="text-xl text-stone-400 font-medium mb-1">2026.06</div>
-                    <div class="text-3xl font-bold text-gray-800">会員数 <span class="text-pink-600">100</span>名</div>
-                 </div>
-                 <div class="bg-white p-6 rounded-xl shadow-md w-full md:w-64 border-2 border-pink-100 flex flex-col justify-center relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-bl-lg">GOAL</div>
-                    <div class="text-xl text-stone-400 font-medium mb-1">2026.12</div>
-                    <div class="text-3xl font-bold text-gray-800">会員数 <span class="text-pink-600">1000</span>名</div>
-                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-stone-900 text-stone-400 py-12 px-6">
-        <div class="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-6 md:mb-0 text-center md:text-left">
-                <h3 class="text-2xl font-serif font-bold text-white tracking-widest mb-2">OWN YOUR LIFE</h3>
-                <p class="text-sm">女性限定オンラインサロン</p>
-            </div>
-            
-            <div class="flex flex-wrap justify-center gap-6 text-sm">
-                <a href="terms.html" class="hover:text-white transition-colors">利用規約</a>
-                <a href="privacy.html" class="hover:text-white transition-colors">プライバシーポリシー</a>
-                <a href="tokusho.html" class="hover:text-white transition-colors">特定商取引法に基づく表記</a>
-                <a href="mailto:ownyour1234@gmail.com" class="hover:text-white transition-colors">お問い合わせ</a>
-            </div>
-        </div>
-        <div class="container mx-auto mt-12 pt-8 border-t border-stone-800 text-center text-xs">
-            &copy; <span id="year"></span> OWN YOUR LIFE. All Rights Reserved.
-        </div>
-    </footer>
-
-    <script>
-        // Initialize Lucide Icons
+    menuBtn.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+            mobileMenu.classList.remove('hidden');
+            menuIcon.setAttribute('data-lucide', 'x');
+        } else {
+            mobileMenu.classList.add('hidden');
+            menuIcon.setAttribute('data-lucide', 'menu');
+        }
         lucide.createIcons();
-
-        // Update Year
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = menuBtn.querySelector('i');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        let isMenuOpen = false;
-
-        menuBtn.addEventListener('click', () => {
-            isMenuOpen = !isMenuOpen;
-            if (isMenuOpen) {
-                mobileMenu.classList.remove('hidden');
-                menuIcon.setAttribute('data-lucide', 'x');
-            } else {
-                mobileMenu.classList.add('hidden');
-                menuIcon.setAttribute('data-lucide', 'menu');
-            }
+    });
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            isMenuOpen = false;
+            mobileMenu.classList.add('hidden');
+            menuIcon.setAttribute('data-lucide', 'menu');
             lucide.createIcons();
         });
+    });
 
-        // Close mobile menu when a link is clicked
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                isMenuOpen = false;
-                mobileMenu.classList.add('hidden');
-                menuIcon.setAttribute('data-lucide', 'menu');
-                lucide.createIcons();
-            });
-        });
-
-        // Scroll Effect for Navbar
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
-                navbar.classList.remove('py-6');
-            } else {
-                navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
-                navbar.classList.add('py-6');
-            }
-        });
-    </script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+            navbar.classList.remove('py-6');
+        } else {
+            navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+            navbar.classList.add('py-6');
+        }
+    });
+</script>
 </body>
 </html>
